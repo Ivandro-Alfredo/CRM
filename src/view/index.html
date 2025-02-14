@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Espaço Zen</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="../js/scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Espaço Zen</h2>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li>
+                    <a href="#">Serviços ▼</a>
+                    <ul class="submenu">
+                        <li>Massagem</li>
+                        <li>Depilação</li>
+                        <li>Reflexologia</li>
+                        <li>Tratamentos Estéticos</li>
+                        <li>Acupuntura</li>
+                        <li>Terapias Holísticas</li>
+                    </ul>
+                </li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#relatorios">Relatórios</a></li>
+                <li><a href="#agendamentos">Agendamentos</a></li>
+            </ul>
+        </div>
+
+        <div class="container-fluid">
+            <div class="fixed-header">
+                <div class="header-content">
+                    <div class="header-left">
+                    </div>
+                    <div class="header-right">
+                        <a href="#" class="icon"><i class="fa fa-user"></i></a>
+                        <a href="#" class="icon"><i class="fa fa-bell"></i></a>
+                        <a href="#" class="icon"><i class="fa fa-cog"></i></a>
+                        <!-- <a href="#" class="icon"><i class="fa fa-box"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <h1>Dashboard de Indicadores</h1> -->
+            <div class="charts-container">
+                <div class="chart-box">
+                    <h3>Distribuição de Clientes</h3>
+                    <canvas id="clientesChart"></canvas>
+                </div>
+                
+                <div class="chart-box">
+                    <h3>Frequência de Atendimento</h3>
+                    <canvas id="frequenciaChart"></canvas>
+                </div>
+
+                <div class="chart-box">
+                    <h3>Distribuição de Clientes</h3>
+                    <canvas id="clienteChart"></canvas>
+                </div>
+                
+                <div class="chart-box">
+                    <h3>Performance e Reclamações</h3>
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
