@@ -49,6 +49,32 @@ text-decoration: none;
 display: block;
 }
 
+
+.has-submenu > a {
+    font-weight: bold;
+}
+
+.submenu {
+    display: none;
+    padding-left: 15px;
+    background: #34495e;
+}
+
+.submenu li {
+    padding: 8px;
+    border-bottom: none;
+}
+
+.submenu a {
+    font-size: 14px;
+}
+
+/* Exibir submenu ao passar o mouse */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+
 /* Dropdown */
 .dropdown-content {
 display: none;
