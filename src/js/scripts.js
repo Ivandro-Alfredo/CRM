@@ -1,5 +1,5 @@
 
-        const clientesCtx = document.getElementById('clientesChart').getContext('2d');
+        // const clientesCtx = document.getElementById('clientesChart').getContext('2d');
         const clienteCtx = document.getElementById('clienteChart').getContext('2d');
         const satisfacaoCtx = document.getElementById('satisfacaoChart').getContext('2d');
         // const receitaCtx = document.getElementById('receitaChart').getContext('2d');
