@@ -9,7 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/registarStyle.css">
+    <script defer src="../js/scripts.js"></script>
     
 </head>
 <body>
@@ -55,6 +57,34 @@
         </ul>
     </aside>
     
+    <main class="main-centered">
+        <section>
+            <div id="container">
+                    <fieldset class="fieldset">
+                        <Legend>Registar Cliente</Legend>
+
+                        <form action="">
+                            <input type="text" name="nomeSolicitante" id="nomeCliente" placeholder="Nome" required>
+                            <input type="text" name="username" placeholder="Sobrenome" id="user" required>
+                            <br><br>
+                            <input type="email" name="email" placeholder="exemplo@gmail.com" id="email" required>
+                            <input type="text" name="fone" placeholder="+244" id="num" required>
+                            <br><br>
+                            <input type="date" name="dataDenascimento" id="dataDenascimento" placeholder="Data de nascimento" required>
+                            <input type="text" name="morada" placeholder="Morada" id="endereco" required>
+                            <br><br>
+                            <select name="nacionalidade" id="nacionalidade">
+                                <option value="" selected>NACIONALIDADE</option>
+                                <option value="Angolana">ANGOLANA</option>
+                            </select>
+                            
+                            <br>
+                        </form>
+                    </fieldset>
+                    <button id="aluguel">Registar</button>
+            </div>
+        </section>
+    </main>
     
     
 
