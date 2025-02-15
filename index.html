@@ -13,67 +13,154 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer src="./src/js/scripts.js"></script>
     <!-- <script defer src="../src/js/scripts.js"></script> -->
+
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Espaço Zen</h2>
-            <ul>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li>
-                    <a href="#">Serviços ▼</a>
-                    <ul class="submenu">
-                        <li>Massagem</li>
-                        <li>Depilação</li>
-                        <li>Reflexologia</li>
-                        <li>Tratamentos Estéticos</li>
-                        <li>Acupuntura</li>
-                        <li>Terapias Holísticas</li>
-                    </ul>
-                </li>
-                <li><a href="#clientes">Clientes</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-                <li><a href="#relatorios">Relatórios</a></li>
-                <li><a href="#agendamentos">Agendamentos</a></li>
-            </ul>
-        </div>
 
-        <div class="container-fluid">
-            <div class="fixed-header">
-                <div class="header-content">
-                    <div class="header-left">
-                    </div>
-                    <div class="header-right">
-                        <a href="#" class="icon"><i class="fa fa-user"></i></a>
-                        <a href="#" class="icon"><i class="fa fa-bell"></i></a>
-                        <a href="#" class="icon"><i class="fa fa-cog"></i></a>
-                        <!-- <a href="#" class="icon"><i class="fa fa-box"></i></a> -->
-                    </div>
+    <!-- <div class="sidebar">
+        
+        <h3> Informações básicas</h3>
+        <ul>
+            <li>Nome:</li>
+            <li>Email:</li>
+            <li>Telefone:</li>
+            <li>Data de nascimento:</li>
+            <li>Endereço:</li>
+        </ul>
+        <br>
+        <h3> Histórico de Atendimento</h3>
+        <h6>Registo de Serviços contratados:</h6>
+        <br>
+
+        <ul>
+            <li>Massagem:</li>
+            <li>Depilação:</li>
+            <li>Cabelereiro:</li>
+            <li>unhas:</li>
+        </ul>
+        <br>
+
+        <h6>Notas sobre preferências e observações específica</h6>
+        <br>
+
+        <ul>
+            <li>Tratamentos:</li>
+            <li>Alergia:</li>
+            <li>Necessidades especiais:</li>
+        </ul>
+    </div> -->
+
+    <!-- <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Formulário de satisfação</a></li>
+            <li><a href="#"> Histórico</a></li>
+            <li><a href="#">Registar serviços</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </aside> -->
+
+    <aside class="sidebar">
+        <h2>Dashboard</h2> 
+        <ul>
+            <!-- Dropdown: Requisitos para produtos e serviços -->
+            <li class="dropdown">
+                <a href="#" class="drop-btn">Produtos e serviços </a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Depilação</a></li>
+                    <li><a href="#">Massagem</a></li>
+                    <li><a href="#">Cabeleireiro</a></li>
+                    <li><a href="#">Unha</a></li>
+                </ul>
+            </li>
+    
+            <!-- Dropdown: Comunicação e interação -->
+            <li class="dropdown">
+                <a href="#" class="drop-btn">Comunicação e interação</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Lembretes</a></li>
+                    <li><a href="#">Agendamentos</a></li>
+                    <li><a href="#">confirmações</a></li>
+                    <li><a href="#">Follow-up</a></li>
+                    
+                    <!-- Submenu dentro do dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="drop-btn">Canais de comunicação ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">E-mail</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                            <li><a href="#">SMS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    
+    
+    <div class="main-content">
+        <h1 class="mb-4">Espaço Zen </h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Segmentação</h5>
+                    <canvas id="clienteChart" class="chart-container"></canvas>
                 </div>
             </div>
-            <!-- <h1>Dashboard de Indicadores</h1> -->
-            <div class="charts-container">
-                <div class="chart-box">
-                    <h3>Distribuição de Clientes</h3>
-                    <canvas id="clientesChart"></canvas>
-                </div>
-                
-                <div class="chart-box">
-                    <h3>Frequência de Atendimento</h3>
-                    <canvas id="frequenciaChart"></canvas>
-                </div>
 
-                <div class="chart-box">
-                    <h3>Distribuição de Clientes</h3>
-                    <canvas id="clienteChart"></canvas>
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Perfil de Consumo</h5>
+                    <canvas id="perfilChart" class="chart-container"></canvas>
                 </div>
-                
-                <div class="chart-box">
-                    <h3>Performance e Reclamações</h3>
-                    <canvas id="performanceChart"></canvas>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>satisfação</h5>
+                    <canvas id="satisfacaoChart" class="chart-container"></canvas>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Avaliações</h5>
+                    <h2>4.8</h2>
                 </div>
             </div>
         </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Serviços Contratados</h5>
+                    <canvas id="servicoChart" class="chart-container"></canvas>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Frequência de reclamações </h5>
+                    <canvas id="performanceChart" class="chart-container"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Distribuição de Clientes</h5>
+                    <canvas id="clientesChart" class="chart-container"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Receita por Serviço</h5>
+                    <canvas id="receitaChart" class="chart-container"></canvas>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>
